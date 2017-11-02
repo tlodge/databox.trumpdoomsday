@@ -10,10 +10,10 @@
         "twitter",
         "tweet"
     ],
-    "homepage": "https://github.com/tlodge/databox.tutorial-trump",
+    "homepage": "https://github.com/tlodge/databox.trumpdoomsday",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/tlodge/databox.tutorial-trump.git"
+        "url": "git+https://github.com/tlodge/databox.trumpdoomsday.git"
     },
     "packages": [
         {
