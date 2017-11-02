@@ -593,7 +593,9 @@
                     "stroke": "none",
                     "stroke-width": 0,
                     "opacity": 1
-                }
+                },
+                "enterFn": null,
+                "exitFn": null
             },
             "c5fc386f.8dd8d8": {
                 "id": "c5fc386f.8dd8d8",
@@ -608,7 +610,9 @@
                     "stroke": "none",
                     "stroke-width": 0,
                     "opacity": 1
-                }
+                },
+                "enterFn": null,
+                "exitFn": null
             },
             "476524be.de5fdc": {
                 "id": "476524be.de5fdc",
@@ -668,7 +672,9 @@
                     "stroke": "none",
                     "stroke-width": 0,
                     "opacity": 1
-                }
+                },
+                "enterFn": null,
+                "exitFn": null
             },
             "db9c1e8f.d00e7": {
                 "id": "db9c1e8f.d00e7",
@@ -762,7 +768,9 @@
                     "stroke": "none",
                     "stroke-width": 0,
                     "opacity": 1
-                }
+                },
+                "enterFn": null,
+                "exitFn": null
             },
             "fce6ed05.5e62e": {
                 "id": "fce6ed05.5e62e",
@@ -1235,11 +1243,95 @@
                     "type": "group",
                     "property": "rotate"
                 }
+            },
+            {
+                "mappingId": "69eb9f9a.121d1",
+                "ttype": "transform",
+                "from": {
+                    "sourceId": "2a94594a.6562d6",
+                    "key": "sentiment",
+                    "path": [
+                        "payload"
+                    ],
+                    "type": "number"
+                },
+                "to": {
+                    "path": [
+                        "ae9bfc19.b95b3",
+                        "a1972160.1272d"
+                    ],
+                    "type": "path",
+                    "property": "rotate"
+                }
+            },
+            {
+                "mappingId": "e20794e4.1a4b08",
+                "ttype": "transform",
+                "from": {
+                    "sourceId": "2a94594a.6562d6",
+                    "key": "sentiment",
+                    "path": [
+                        "payload"
+                    ],
+                    "type": "number"
+                },
+                "to": {
+                    "path": [
+                        "ae9bfc19.b95b3",
+                        "2571aae4.ae7146"
+                    ],
+                    "type": "path",
+                    "property": "rotate"
+                }
+            },
+            {
+                "mappingId": "26945bcd.37ad94",
+                "ttype": "transform",
+                "from": {
+                    "sourceId": "2a94594a.6562d6",
+                    "key": "sentiment",
+                    "path": [
+                        "payload"
+                    ],
+                    "type": "number"
+                },
+                "to": {
+                    "path": [
+                        "ae9bfc19.b95b3",
+                        "c5fc386f.8dd8d8"
+                    ],
+                    "type": "ellipse",
+                    "property": "scale"
+                }
+            },
+            {
+                "mappingId": "9c12d6b3.b5de18",
+                "ttype": "transform",
+                "from": {
+                    "sourceId": "2a94594a.6562d6",
+                    "key": "sentiment",
+                    "path": [
+                        "payload"
+                    ],
+                    "type": "number"
+                },
+                "to": {
+                    "path": [
+                        "ae9bfc19.b95b3",
+                        "9e63f778.0fbc08"
+                    ],
+                    "type": "ellipse",
+                    "property": "scale"
+                }
             }
         ],
         "transformers": {
             "3d3a39ba.9cc6b6": "return `rotate(${sentiment*360})`",
-            "d2035481.b7e228": "return `rotate(${37-(sentiment*37)})`"
+            "d2035481.b7e228": "return `rotate(${37-(sentiment*37)})`",
+            "69eb9f9a.121d1": "return `rotate(${sentiment*37})`",
+            "e20794e4.1a4b08": "return `rotate(${sentiment*-37})`",
+            "26945bcd.37ad94": "return `scale(${1 + sentiment*0.5})`;",
+            "9c12d6b3.b5de18": "return `scale(${1 + sentiment*0.5})`;"
         },
         "canvasdimensions": {
             "w": 1348,
@@ -1341,10 +1433,138 @@
                         ]
                     }
                 ]
+            },
+            "69eb9f9a.121d1": {
+                "node": {
+                    "nid": "83cdc5c2.5b13f8",
+                    "type": "uibuilder",
+                    "category": "processors",
+                    "color": "#002255",
+                    "unicode": "f03e"
+                },
+                "parents": [
+                    {
+                        "node": {
+                            "nid": "2a94594a.6562d6",
+                            "type": "dbfunction",
+                            "category": "processors",
+                            "color": "#002255",
+                            "unicode": "f121"
+                        },
+                        "parents": [
+                            {
+                                "node": {
+                                    "nid": "9a35d69d.adeb08",
+                                    "type": "twitter",
+                                    "category": "datastores",
+                                    "color": "#ffcc00",
+                                    "unicode": "f099"
+                                },
+                                "parents": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "e20794e4.1a4b08": {
+                "node": {
+                    "nid": "83cdc5c2.5b13f8",
+                    "type": "uibuilder",
+                    "category": "processors",
+                    "color": "#002255",
+                    "unicode": "f03e"
+                },
+                "parents": [
+                    {
+                        "node": {
+                            "nid": "2a94594a.6562d6",
+                            "type": "dbfunction",
+                            "category": "processors",
+                            "color": "#002255",
+                            "unicode": "f121"
+                        },
+                        "parents": [
+                            {
+                                "node": {
+                                    "nid": "9a35d69d.adeb08",
+                                    "type": "twitter",
+                                    "category": "datastores",
+                                    "color": "#ffcc00",
+                                    "unicode": "f099"
+                                },
+                                "parents": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "26945bcd.37ad94": {
+                "node": {
+                    "nid": "83cdc5c2.5b13f8",
+                    "type": "uibuilder",
+                    "category": "processors",
+                    "color": "#002255",
+                    "unicode": "f03e"
+                },
+                "parents": [
+                    {
+                        "node": {
+                            "nid": "2a94594a.6562d6",
+                            "type": "dbfunction",
+                            "category": "processors",
+                            "color": "#002255",
+                            "unicode": "f121"
+                        },
+                        "parents": [
+                            {
+                                "node": {
+                                    "nid": "9a35d69d.adeb08",
+                                    "type": "twitter",
+                                    "category": "datastores",
+                                    "color": "#ffcc00",
+                                    "unicode": "f099"
+                                },
+                                "parents": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "9c12d6b3.b5de18": {
+                "node": {
+                    "nid": "83cdc5c2.5b13f8",
+                    "type": "uibuilder",
+                    "category": "processors",
+                    "color": "#002255",
+                    "unicode": "f03e"
+                },
+                "parents": [
+                    {
+                        "node": {
+                            "nid": "2a94594a.6562d6",
+                            "type": "dbfunction",
+                            "category": "processors",
+                            "color": "#002255",
+                            "unicode": "f121"
+                        },
+                        "parents": [
+                            {
+                                "node": {
+                                    "nid": "9a35d69d.adeb08",
+                                    "type": "twitter",
+                                    "category": "datastores",
+                                    "color": "#ffcc00",
+                                    "unicode": "f099"
+                                },
+                                "parents": []
+                            }
+                        ]
+                    }
+                ]
             }
         },
-        "x": 430,
-        "y": 200,
+        "x": 433,
+        "y": 219,
         "wires": [
             [
                 "3b8495a.c860f6a"
